@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BaseRowFormer<T: UITableViewCell>: RowFormer {
+open class BaseRowFormer<T: UITableViewCell>: RowFormer {
     
     // MARK: Public
     

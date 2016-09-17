@@ -13,7 +13,7 @@ public protocol FormableRow: class {
     func updateWithRowFormer(_ rowFormer: RowFormer)
 }
 
-public class RowFormer {
+open class RowFormer {
     
     // MARK: Public
     
