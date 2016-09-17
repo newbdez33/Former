@@ -31,7 +31,7 @@ open class InlinePickerRowFormer<T: UITableViewCell, S>
     public typealias InlineCellType = FormPickerCell
     
     public let inlineRowFormer: RowFormer
-    override public var canBecomeEditing: Bool {
+    override open var canBecomeEditing: Bool {
         return enabled
     }
     
@@ -55,7 +55,7 @@ open class InlinePickerRowFormer<T: UITableViewCell, S>
         return self
     }
     
-    public override func update() {
+    open override func update() {
         super.update()
         
         let titleLabel = cell.formTitleLabel()
@@ -100,7 +100,7 @@ open class InlinePickerRowFormer<T: UITableViewCell, S>
         }.onValueChanged(valueChanged).update()
     }
 
-    public override func cellSelected(indexPath: IndexPath) {
+    open override func cellSelected(indexPath: IndexPath) {
         former?.deselect(animated: true)
     }
     

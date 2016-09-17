@@ -22,7 +22,7 @@ open class RowFormer {
     public final var rowHeight: CGFloat = 44
     public final var isEditing = false
     public final var enabled = true { didSet { update() } }
-    public var canBecomeEditing: Bool {
+    open var canBecomeEditing: Bool {
         return false
     }
     
@@ -48,9 +48,9 @@ open class RowFormer {
         return self
     }
     
-    public func initialized() {}
+    open func initialized() {}
     
-    public func update() {
+    open func update() {
         cellInstance.isUserInteractionEnabled = enabled
         onUpdate?(self)
         
@@ -68,7 +68,7 @@ open class RowFormer {
         }
     }
     
-    public func cellSelected(indexPath: IndexPath) {
+    open func cellSelected(indexPath: IndexPath) {
         if enabled {
             onSelected?(self)
         }
