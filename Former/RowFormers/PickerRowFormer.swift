@@ -13,7 +13,7 @@ public protocol PickerFormableRow: FormableRow {
     func formPickerView() -> UIPickerView
 }
 
-public class PickerItem<S> {
+open class PickerItem<S> {
     
     public let title: String
     public let value: S?

@@ -14,7 +14,7 @@ public protocol InlinePickerFormableRow: FormableRow {
     func formDisplayLabel() -> UILabel?
 }
 
-public class InlinePickerItem<S>: PickerItem<S> {
+open class InlinePickerItem<S>: PickerItem<S> {
     
     public let displayTitle: NSAttributedString?
     public init(title: String, displayTitle: NSAttributedString? = nil, value: S? = nil) {
@@ -23,7 +23,7 @@ public class InlinePickerItem<S>: PickerItem<S> {
     }
 }
 
-public class InlinePickerRowFormer<T: UITableViewCell, S>
+open class InlinePickerRowFormer<T: UITableViewCell, S>
 : BaseRowFormer<T>, Formable, ConfigurableInlineForm where T: InlinePickerFormableRow {
     
     // MARK: Public
